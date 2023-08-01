@@ -1,9 +1,12 @@
+import Home from './components/Home';
+import GlobalStyles from './styles/GlobalStyles';
+
 const App = () => {
-  const x = 'poo';
   return (
-    <div>
-      <div>poop</div>
-    </div>
+    <>
+      <GlobalStyles />
+      <Home />
+    </>
   );
 };
 

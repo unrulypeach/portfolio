@@ -7,6 +7,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:react/jsx-runtime',
     'plugin:import/recommended',
+    'plugin:import/typescript',
     'plugin:jsx-a11y/recommended',
     'plugin:@typescript-eslint/recommended',
     'eslint-config-prettier',
@@ -19,7 +20,15 @@ module.exports = {
     sourceType: 'module',
     project: ['tsconfig.json'],
   },
-  settings: { react: { version: '18.2' } },
+  settings: {
+    react: { version: '18.2' },
+    'import/resolver': {
+      node: {
+        paths: ['src'],
+        extensions: ['.js', '.ts', '.d.ts', '.tsx'],
+      },
+    },
+  },
   plugins: ['react-refresh', 'prettier'],
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
