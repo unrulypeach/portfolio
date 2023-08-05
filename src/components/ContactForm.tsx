@@ -7,7 +7,7 @@ const ContactForm = () => {
     width: 200px;
   `;
 
-  const FormLabel = styled.label``;
+  // const FormLabel = styled.label``;
 
   const LabelSpan = styled.span`
     margin-left: 2px;
@@ -26,29 +26,29 @@ const ContactForm = () => {
     height: 2em;
     border: solid 2px #2e3047;
     border-radius: 10px;
-    background-color: #3c3f58;
+    background-color: transparent;
   `;
 
   const FormTextarea = styled.textarea`
     border: solid 2px #2e3047;
     border-radius: 10px;
-    background-color: #3c3f58;
+    background-color: transparent;
   `;
 
   return (
     <FormWrapper action="submit">
-      <FormLabel htmlFor="name">
+      <label htmlFor="name">
         <LabelSpan>Name</LabelSpan>
         <FormInput type="text" />
-      </FormLabel>
-      <FormLabel htmlFor="email">
+      </label>
+      <label htmlFor="email">
         <LabelSpan>Email</LabelSpan>
         <FormInput type="email" />
-      </FormLabel>
-      <FormLabel htmlFor="message">
+      </label>
+      <label htmlFor="message">
         <LabelSpan>Message</LabelSpan>
         <FormTextarea name="message" id="message" cols={28} rows={8} />
-      </FormLabel>
+      </label>
     </FormWrapper>
   );
 };
