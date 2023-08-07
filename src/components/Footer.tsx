@@ -1,18 +1,20 @@
 import { styled } from 'styled-components';
 
-const Footer = ({ children }: { children: JSX.Element }) => {
-  const Footer = styled.footer`
-    height: 30vh;
-    width: 100%;
-    position: relative;
-    top: 300vh;
-    z-index: 100;
+const Footer = styled.footer`
+  height: fit-content;
+  width: 100%;
+  position: relative;
+  top: 70vh;
+  z-index: 100;
 
-    display: flex;
-    justify-content: center;
-  `;
+  background: #3c3f58;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
 
+const StyledFooter = ({ children }: { children: JSX.Element }) => {
   return <Footer>{children}</Footer>;
 };
 
-export default Footer;
+export default StyledFooter;
